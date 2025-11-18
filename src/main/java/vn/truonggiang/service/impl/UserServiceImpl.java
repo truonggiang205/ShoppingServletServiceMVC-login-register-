@@ -27,4 +27,11 @@ public class UserServiceImpl implements UserService {
     public User get(String username) {
         return userDao.get(username);
     }
+
+    @Override
+    public void register(User user) {
+        // Giống như login và get, chúng ta sẽ gọi 
+        // một phương thức 'insert' từ userDao
+        userDao.insert(user);
+    }
 }
